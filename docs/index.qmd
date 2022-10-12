@@ -3,7 +3,7 @@ title: "Welcome"
 bibliography: ref.bib
 ---
 
-This is a leisure project that explores the idea of language, math and code going hand in hand for exploring physics- using the Julia programming language, which has speed, simplicity, elegance, emojis 😵‍💫 and the most important of all: Greek $\alpha$-bet!
+This is a leisure project that explores the idea of language, math and code going hand in hand for exploring physics- using the Julia programming language, which has speed, simplicity, elegance, emojis 😵‍💫 and the most important of all: Greek $\alpha$-bet! The aim is to explore some algorithms- both numeric and symbolic that can help us understand general concepts. Plots and widgets would be added for visual aid.
 
 A book on classical physics [@sussman2015structure] is based on the the same approach but they didn't use Julia- so this was not meant for mere mortals like me. So I decided to write this, borrowing liberally from here and other sources that would be cited as much as possible. Would gladly quote any sources that seem to explain particular topics *better* (simpler or more detailed) as well.
 
