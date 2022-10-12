@@ -1,0 +1,6 @@
+---
+title: Classical mechanics
+---
+
+1. [Vectors and Kinematics](Classical-Mechanics/Vectors_kinematics/main.qmd)
+2. [Least action principle and Lagrangian](Classical-Mechanics/Intro_Lagrangian/main.qmd)

@@ -1,0 +1,28 @@
+---
+title: Vector algebra and kinematics
+reference-location: margin
+format:
+  html:
+    code-fold: true
+jupyter: julia-1.8
+---
+
+The world, or more precisely the *space* around us is 3 dimensional. This means the position of any point object is a *vector* from a chosen *origin* that can always be represented as a linear combination of 3 basis vectors. Computers always represent vectors as a list of numbers. 
+
+```{julia}
+#| label: fig-basis-vec
+#| fig-cap: "Basis vectors in 2D"
+using CairoMakie, GeometryBasics
+
+O = Point(0, 0) # Origin in 3D vector space
+x̂ = Point(1, 0) # Basis vector along x
+ŷ = Point(0, 1) # Basis vector along y
+#ẑ = Point(0, 1, 0) # Basis vector along z
+
+fig, ax, b1 = arrows([O, O], [x̂, ŷ], color="red",
+                     ax = (; backgroundcolor="transparent"),
+                     fig = (; backgroundcolor="transparent"))
+```
+
+[Visualizing vector algebra and calculus- Pluto notebook]()
+

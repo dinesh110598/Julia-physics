@@ -1,0 +1,29 @@
+{
+  "index.qmd": {
+    "index.html": "f55ca735"
+  },
+  "about.qmd": {
+    "about.html": "a0476ec4"
+  },
+  "Intro_Lagrangian/main.qmd": {
+    "main.html": "0061036a"
+  },
+  "notes.md": {
+    "notes.html": "533ea956"
+  },
+  "julia-tutorials.qmd": {
+    "julia-tutorials.html": "8fe9c0e8"
+  },
+  "Classical-mech.qmd": {
+    "Classical-mech.html": "bf69489c"
+  },
+  "Classical-Mechanics/Intro_Lagrangian/main.qmd": {
+    "main.html": "5b61f276"
+  },
+  "Classical-Mechanics/Vectors_kinematics/main.qmd": {
+    "main.html": "6c6b953c"
+  },
+  "Classical-Mechanics/Vectors_kinematics/notes.md": {
+    "notes.html": "99b28ecb"
+  }
+}
