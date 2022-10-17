@@ -53,7 +53,7 @@
     "href": "Classical-Mechanics/Vectors_kinematics/main.html",
     "title": "Vector algebra and kinematics",
     "section": "",
-    "text": "Code\nusing CairoMakie, GeometryBasics\n\nO = Point(0, 0) # Origin in 3D vector space\nx̂ = Point(1, 0) # Basis vector along x\nŷ = Point(0, 1) # Basis vector along y\n#ẑ = Point(0, 1, 0) # Basis vector along z\n\nfig, ax, b1 = arrows([O, O], [x̂, ŷ], color=\"red\",\n                     ax = (; backgroundcolor=\"transparent\"),\n                     fig = (; backgroundcolor=\"transparent\"))\n\n\n\n\n\nFigure 1: Basis vectors in 2D\n\n\n\n\nVisualizing vector algebra and calculus- Pluto notebook"
+    "text": "Code\nusing CairoMakie, GeometryBasics\n\nO = Point(0, 0) # Origin in 2D vector space\nx̂ = Point(1, 0) # Basis vector along x\nŷ = Point(0, 1) # Basis vector along y\n#ẑ = Point(0, 1, 0) # Basis vector along z\n\nfig, ax, b1 = arrows([O, O], [x̂, ŷ], color=\"red\",\n                     ax = (; backgroundcolor=\"transparent\"),\n                     fig = (; backgroundcolor=\"transparent\"))\n\n\n\n\n\nFigure 1: Basis vectors in 2D\n\n\n\n\nVisualizing vector algebra and calculus- Pluto notebook\nObjects in space evolve with time, a scalar quantity. The position vector of every particle is thus a function of time."
   },
   {
     "objectID": "Classical-Mechanics/Vectors_kinematics/notes.html",

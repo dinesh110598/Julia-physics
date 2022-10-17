@@ -14,7 +14,7 @@ The world, or more precisely the *space* around us is 3 dimensional. This means 
 #| fig-cap: "Basis vectors in 2D"
 using CairoMakie, GeometryBasics
 
-O = Point(0, 0) # Origin in 3D vector space
+O = Point(0, 0) # Origin in 2D vector space
 x̂ = Point(1, 0) # Basis vector along x
 ŷ = Point(0, 1) # Basis vector along y
 #ẑ = Point(0, 1, 0) # Basis vector along z
@@ -24,5 +24,6 @@ fig, ax, b1 = arrows([O, O], [x̂, ŷ], color="red",
                      fig = (; backgroundcolor="transparent"))
 ```
 
-[Visualizing vector algebra and calculus- Pluto notebook]()
+[Visualizing vector algebra and calculus- Pluto notebook](Vectors_tut.html)
 
+Objects in space evolve with time, a scalar quantity. The position vector of every particle is thus a function of time.
