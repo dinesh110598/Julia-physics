@@ -1,33 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome",
-    "section": "",
-    "text": "A book on classical physics (Sussman and Wisdom 2015) is based on the the same approach but they didn’t use Julia- so this was not meant for mere mortals like me. So I decided to write this, borrowing liberally from here and other sources that would be cited as much as possible. Would gladly quote any sources that seem to explain particular topics better (simpler or more detailed) as well.\nWe have both static pages and Pluto notebooks which can be run interactively either using an online host or locally on your machine. Here’s an example to fool around with.\n\n\n\n\nReferences\n\nSussman, Gerald Jay, and Jack Wisdom. 2015. Structure and Interpretation of Classical Mechanics. The MIT Press."
-  },
-  {
-    "objectID": "notes.html",
-    "href": "notes.html",
-    "title": "Physics with Julia",
-    "section": "",
-    "text": "Create a Newton’s laws tutorial with numerical functions generated from Symbolics pkg rather than hardcoding them.\nThere’s a good site that alludes to the use of symbolics in physics. Precompiling symbolics generated numerical functions maybe tricky and unnecessary for tutorials. But maybe mention this as a sidenote.\nSpend enough time to set this up. No hurry at all.\n\nI would assume people already know the math and even physics to a basic extent. Emphasis will be on computer-intensive or enabled concepts and workflow.\nAn article about the advantages of Julia:\n\nIt’s fast, has a simple syntax.\nEasy building and reproducing of environments\nMultiple dispatch with structs. More physics-like than Python’s OOP.\nSimple and great plotting packages.\nSymbolics that talks well with numerics\nEasy to build and register own packages\n\n\n\n\n\nStart with the basics of vector calculus with simple library code and graphs.\n\nDo we already have a simple library for this? The functionality in Makie with Point objects seems sufficient for plotting. Find a coding API that integrates nicely with Symbolics.\nThis would probably be minimal though. Maybe the first half of an exercise on Newtonian mechanics.\nStudy CairoMakie more carefully and figure out a way to make user-friendly 2D plots that don’t overlap. One 3D plot can be shown for the sake of visualization though."
-  },
-  {
-    "objectID": "julia-tutorials.html",
-    "href": "julia-tutorials.html",
-    "title": "Julia tutorials and tips",
-    "section": "",
-    "text": "Article 1\nArticle 2"
-  },
-  {
-    "objectID": "Classical-mech.html",
-    "href": "Classical-mech.html",
-    "title": "Classical mechanics",
-    "section": "",
-    "text": "Vectors and Kinematics\nLeast action principle and Lagrangian"
-  },
-  {
     "objectID": "Classical-Mechanics/Intro_Lagrangian/main.html",
     "href": "Classical-Mechanics/Intro_Lagrangian/main.html",
     "title": "Principle of Least action and Lagrangian mechanics",
@@ -53,13 +25,41 @@
     "href": "Classical-Mechanics/Vectors_kinematics/main.html",
     "title": "Vector algebra and kinematics",
     "section": "",
-    "text": "Code\nusing CairoMakie, GeometryBasics\n\nO = Point(0, 0) # Origin in 2D vector space\nx̂ = Point(1, 0) # Basis vector along x\nŷ = Point(0, 1) # Basis vector along y\n#ẑ = Point(0, 1, 0) # Basis vector along z\n\nfig, ax, b1 = arrows([O, O], [x̂, ŷ], color=\"red\",\n                     ax = (; backgroundcolor=\"transparent\"),\n                     fig = (; backgroundcolor=\"transparent\"))\n\n\n\n\n\nFigure 1: Basis vectors in 2D\n\n\n\n\nVisualizing vector algebra and calculus- Pluto notebook\nObjects in space evolve with time, a scalar quantity. The position vector of every particle is thus a function of time."
+    "text": "In Newtonian mechanics, we study the motion of particles in space. The “space” or the set of all particle positions is a vector space for some choice of origin, or observer position if you’d like. Elementary introductions refer to vectors as “quantities with magnitude and direction”- which is figuratively how one would characterize positions relative to an origin. Rigorous mathematical definition alludes to any set which is closed under some notion of addition and scalar multiplication. We also have a good idea of distance/length and whether any two vectors are perpendicular, so our position vector space is equipped with a dot product.\nFor any practical calculation- be it paper or computers, we must represent vectors as components wrt some basis, preferably orthonormal. In particular, we have 3 basis vectors, or space is 3 dimensional- just everyday experience or perhaps an unsaid postulate in Newtonian mechanics1. So we have the orthonormal basis \\(\\hat i, \\hat j\\) and \\(\\hat k\\) and every other vector has components given by the dot products with these vectors. Computers don’t really imagine vectors in space, hence a vector here is nothing but a list of numbers: \\[\n\\begin{align*}\n\\hat i &= [1, 0, 0] \\\\\n\\hat j &= [0, 1, 0] \\\\\n\\hat k &= [0, 0, 1] \\\\\n\\end{align*}\n\\]1 Is this really true though? Vector space assumption itself can be problematic at some level, or the fact that position and time are decoupled, or allowing continuous position values to arbitrarily small scales, we can go on. Truth has no place in science- we can say the assumption is accurate in a large domain of applicability.\nOperations over vectors include rotations (multiplication using matrices), translation (elementwise addition with another vector) and dot product (multiplication with transpose) all of which can be performed by computers numerically. Plotting libraries can help us in visualizing these operations. Here’s a Pluto notebook exercise:\nVisualizing vector algebra and calculus- Pluto notebook\nObjects in space evolve with time, a scalar quantity. The position vector of every particle is thus a function of time."
   },
   {
     "objectID": "Classical-Mechanics/Vectors_kinematics/notes.html",
     "href": "Classical-Mechanics/Vectors_kinematics/notes.html",
     "title": "Physics with Julia",
     "section": "",
-    "text": "Need to write a Pluto notebook on working with and visulaizing vectors in Julia.\n3D plots that are interactive- they need to work on live html like a Pluto server- I know that Plotly backend in Plots.jl works for static html but need to try the WebGL backend in Makie (still experimental but almost feature complete).\n\nThough WGLMakie has feature parity, it seems we need to add JS code in order to access live server behavior (where we have an Observable and Observer interaction- this is pretty cool in GLMakie though and should try some time).\nBut static 3D plots can still be achieved with pure Julia like with Plotly backend in Plots or WGLMakie itself, miming the CairoMakie syntax. Just live animations can be problematic.\nThat’s the plan"
+    "text": "Tips and plan\n\nNeed to write a Pluto notebook on working with and visulaizing vectors in Julia.\n3D plots that are interactive- they need to work on live html like a Pluto server- I know that Plotly backend in Plots.jl works for static html but need to try the WebGL backend in Makie (still experimental but almost feature complete).\n\nThough WGLMakie has feature parity, it seems we need to add JS code in order to access live server behavior (where we have an Observable and Observer interaction- this is pretty cool in GLMakie though and should try some time).\nBut static 3D plots can still be achieved with pure Julia like with Plotly backend in Plots or WGLMakie itself, miming the CairoMakie syntax. Just live animations can be problematic.\nThat’s the plan"
+  },
+  {
+    "objectID": "Classical-mech.html",
+    "href": "Classical-mech.html",
+    "title": "Classical mechanics",
+    "section": "",
+    "text": "Vectors and Kinematics\nLeast action principle and Lagrangian"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome",
+    "section": "",
+    "text": "Traditionally, learning and research in physics have been done using the pen and paper. With recent strides in accessibility to computers (both physical and cloud). For modern sensibilities, we use a modern tool- the Julia programming language, which has speed, simplicity, elegance, emojis 😵‍💫 and the most important of all: Greek \\(\\alpha\\)-bet! The idea is to explore algorithms that aid understanding both basic and advanced concepts, that complement the traditional learning methods. As they say, A picture is worth a thousand words, so we’ll have a lot of plots/graphs throughout.\nWe have both regular web pages and Pluto notebooks which can be run interactively either using an online host or locally on your machine. Here’s an example to fool around with. Interactive notebooks are great because a widget is worth a thousand pictures.\nWhere do we go from here? If you’re new to Julia, here’s a small page with links to other guides and resources:\nJulia language resources"
+  },
+  {
+    "objectID": "julia-tutorials.html",
+    "href": "julia-tutorials.html",
+    "title": "Julia language resources",
+    "section": "",
+    "text": "Let me state up front that Julia itself has a pretty simple and intuitive syntax for beginners and one probably doesn’t need too many guides/tutorials to understand the code we write. For example, simple functions can be defined just the way we write down on paper:\nψ(x) = cos(x) + sin(x)\nThat being said, the best way to learn something is to do it. Install Julia (preferably Linux or MacOS) on your computer first. Add the Pluto package, import and Pluto.run(), watch it open a browser window, which let’s you open either a fresh window or pre-made notebooks with introductory tutorials of some essential packages, as well as load user saved notebooks.\nIf you’re familiar with either Matlab or Python (Numpy), here’s a cheatsheet for common Julia functionality."
+  },
+  {
+    "objectID": "notes.html",
+    "href": "notes.html",
+    "title": "Physics with Julia",
+    "section": "",
+    "text": "Create a Newton’s laws tutorial with numerical functions generated from Symbolics pkg rather than hardcoding them.\nThere’s a good site that alludes to the use of symbolics in physics. Precompiling symbolics generated numerical functions maybe tricky and unnecessary for tutorials. But maybe mention this as a sidenote.\nSpend enough time to set this up. No hurry at all.\n\nI would assume people already know the math and even physics to a basic extent. Emphasis will be on computer-intensive or enabled concepts and workflow.\nAn article about the advantages of Julia:\n\nIt’s fast, has a simple syntax.\nEasy building and reproducing of environments\nMultiple dispatch with structs. More physics-like than Python’s OOP.\nSimple and great plotting packages.\nSymbolics that talks well with numerics\nEasy to build and register own packages\n\n\n\n\n\nStart with the basics of vector calculus with simple library code and graphs.\n\nDo we already have a simple library for this? The functionality in Makie with Point objects seems sufficient for plotting. Find a coding API that integrates nicely with Symbolics.\nThis would probably be minimal though. Maybe the first half of an exercise on Newtonian mechanics.\nStudy CairoMakie more carefully and figure out a way to make user-friendly 2D plots that don’t overlap. One 3D plot can be shown for the sake of visualization though."
   }
 ]

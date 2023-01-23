@@ -3,8 +3,11 @@ title: "Welcome"
 bibliography: ref.bib
 ---
 
-This is a leisure project that explores the idea of language, math and code going hand in hand for exploring physics- using the Julia programming language, which has speed, simplicity, elegance, emojis 😵‍💫 and the most important of all: Greek $\alpha$-bet! The aim is to explore some algorithms- both numeric and symbolic that can help us understand general concepts. Plots and widgets would be added for visual aid.
+Traditionally, learning and research in physics have been done using the pen and paper. With recent strides in accessibility to computers (both physical and cloud). For modern sensibilities, we use a modern tool- the Julia programming language, which has speed, simplicity, elegance, emojis 😵‍💫 and the most important of all: Greek $\alpha$-bet! The idea is to explore algorithms that aid understanding both basic and advanced concepts, that complement the traditional learning methods. As they say, *A picture is worth a thousand words*, so we'll have a lot of plots/graphs throughout.
 
-A book on classical physics [@sussman2015structure] is based on the the same approach but they didn't use Julia- so this was not meant for mere mortals like me. So I decided to write this, borrowing liberally from here and other sources that would be cited as much as possible. Would gladly quote any sources that seem to explain particular topics *better* (simpler or more detailed) as well.
+We have both regular web pages and [**Pluto notebooks**](https://github.com/fonsp/Pluto.jl) which can be run interactively either using an online host or locally on your machine. [Here's an example to fool around with](https://binder.plutojl.org/). Interactive notebooks are great because *a widget is worth a thousand pictures*.
 
-We have both static pages and **Pluto notebooks** which can be run interactively either using an online host or locally on your machine. [Here's an example to fool around with](Classical-Mechanics/Vectors_kinematics/Vectors_tut.html).
+Where do we go from here? If you're new to Julia, here's a small page with links to other guides and resources:
+
+[Julia language resources](julia-tutorials.qmd)
+

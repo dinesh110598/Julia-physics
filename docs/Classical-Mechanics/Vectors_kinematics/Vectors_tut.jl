@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.19.12
+# v0.19.13
 
 using Markdown
 using InteractiveUtils
@@ -73,7 +73,7 @@ fig, ax, ar = arrows(pt.([O, O, O]), pt.([x̂, ŷ, ẑ]), arrowsize=0.1);
 # First arg gives the tail position of each vector, which is origin here
 
 # ╔═╡ 09992df8-5d89-486e-a597-ee5e376ea9ce
-ar2 = arrows!(ax, pt.([O]), pt.([v]), color="red");
+ar2 = arrows!(ax, pt.([O]), pt.([v]), color="red", arrowsize=0.1);
 # Plot vector v defined above as red arrow
 
 # ╔═╡ 681fb453-0ee4-4f76-a6d5-3c78e4f6511d
@@ -98,7 +98,7 @@ a = rand(3) # Vector with 3 (uniform) random components
 b = randn(3) # Vector with 3 (normal) random components
 
 # ╔═╡ ac535d0a-f4a0-478d-9ad2-c090261c097c
-c = rand(1:6) # Scalar die roll
+c = 2.7
 
 # ╔═╡ 9e2d7bbf-824e-4525-b6ff-2773af2c1722
 md"""
@@ -111,7 +111,7 @@ We use a `.*` operator for element-wise multiplication of a vector with a scalar
 s_mul = c .* a
 
 # ╔═╡ 41ac3f0e-bb10-4344-a8e5-4ebe11e1cc84
-arrows(pt.([O, O]), pt.([a, s_mul]), color=[:black, :blue])
+arrows(pt.([O, O]), pt.([a, s_mul]), color=[:black, :blue], arrowsize=[0.3, 0.1])
 
 # ╔═╡ a0be1dc4-5c45-49b1-95ed-5ba49da2b9fd
 md"#### Adding vectors
@@ -231,7 +231,7 @@ WGLMakie = "~0.6.13"
 PLUTO_MANIFEST_TOML_CONTENTS = """
 # This file is machine-generated - editing it directly is not advised
 
-julia_version = "1.8.1"
+julia_version = "1.8.2"
 manifest_format = "2.0"
 project_hash = "20c689403269baa31065b35312e1a7c1e7bc1309"
 
@@ -1277,7 +1277,7 @@ version = "1.9.0"
 [[deps.Tar]]
 deps = ["ArgTools", "SHA"]
 uuid = "a4e569a6-e804-4fa4-b0f3-eef7a1d5b13e"
-version = "1.10.0"
+version = "1.10.1"
 
 [[deps.TensorCore]]
 deps = ["LinearAlgebra"]

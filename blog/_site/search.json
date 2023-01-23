@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Adventures with code in physics",
+    "section": "",
+    "text": "Post With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJan 21, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nJan 18, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "The articles are intended to be fairly basic treatments of various concepts that involve the use of computer programming in physics. They aren’t necessarily comprehensive or self-contained but I’ll try to cite more detailed sources as much as possible. Topics can range from simple mathematical concepts like algebra and probability illustrated using code to pretty advanced ones like quantum computation and machine learning algorithms- not in any particular order.\nWe’ll primarily use the Julia programming language for coding, in the form of Pluto notebooks. Julia has important advantages like speed, simplicity, great community, emojis 😉 and Greek α-bet, to best deal with physics. Pluto notebooks offer reproducibility, reactiveness and widgets! Python and Jupyter notebooks may be used occassionally if it seems reasonable. The top priority will be for the articles to look more physics-y and less code-y.\nMe? I’m a researcher studying and working on computational physics algorithms- and this is a fun side-project, for now. Please feel free to reach out for comments, love and criticism…"
+  }
+]

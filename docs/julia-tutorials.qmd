@@ -1,6 +1,13 @@
 ---
-title: Julia tutorials and tips
+title: Julia language resources
 ---
 
-1. [Article 1]()
-2. [Article 2]()
+Let me state up front that Julia itself has a pretty simple and intuitive syntax for beginners and one probably doesn't need too many guides/tutorials to understand the code we write. For example, simple functions can be defined just the way we write down on paper:
+
+```
+ψ(x) = cos(x) + sin(x)
+```
+
+That being said, the best way to learn something is to **do it**. [Install Julia](https://julialang.org/downloads/platform/) (preferably Linux or MacOS) on your computer first. Add the [Pluto package](https://github.com/fonsp/Pluto.jl#lets-do-it), import and `Pluto.run()`, watch it open a browser window, which let's you open either a fresh window or pre-made notebooks with introductory tutorials of some essential packages, as well as load user saved notebooks.
+
+If you're familiar with either Matlab or Python (Numpy), here's a [cheatsheet](https://cheatsheets.quantecon.org/) for common Julia functionality. 
