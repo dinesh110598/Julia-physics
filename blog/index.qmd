@@ -1,5 +1,5 @@
 ---
-title: "Adventures with code in physics"
+title: "Adventures with coding in physics"
 listing:
   contents: posts
   sort: "date desc"
